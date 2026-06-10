@@ -1,10 +1,16 @@
 'use strict';
 
 const spider = document.querySelector('.spider');
-const spiderDim = spider.getBoundingClientRect();
+const spiderDim = {
+  width: spider.offsetWidth,
+  height: spider.offsetHeight,
+};
 
 const wall = document.querySelector('.wall');
-const wallDim = wall.getBoundingClientRect();
+const wallDim = {
+  width: wall.offsetWidth,
+  height: wall.offsetHeight,
+};
 
 const leftSpider = (wallDim.width - spiderDim.width) / 2;
 const topSpider = (wallDim.height - spiderDim.height) / 2;

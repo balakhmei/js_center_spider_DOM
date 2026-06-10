@@ -8,12 +8,12 @@ const spiderDim = {
 
 const wall = document.querySelector('.wall');
 const wallDim = {
-  width: wall.offsetWidth,
-  height: wall.offsetHeight,
+  width: wall.clientWidth,
+  height: wall.clientHeight,
 };
 
-const leftSpider = (wallDim.width - spiderDim.width) / 2;
-const topSpider = (wallDim.height - spiderDim.height) / 2;
+const leftSpider = wallDim.width / 2 - spiderDim.width / 2;
+const topSpider = wallDim.height / 2 - spiderDim.height / 2;
 
 spider.style.left = leftSpider + 'px';
 spider.style.top = topSpider + 'px';
